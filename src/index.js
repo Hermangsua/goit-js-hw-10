@@ -69,13 +69,17 @@ function createOneCountryMarkUp(countries) {
 function createCountriesMarkUp(countries) {
   const markUpCountry = countries
     .map(country => {
-      return `<li><img src="${country.flags.svg}" alt="" width = "30">${country.name.official}</li>`;
+      return `<li><img src="${country.flags.svg}" alt="" width = "30"><span>${country.name.official}</span></li>`;
     })
     .join('');
   countryList.insertAdjacentHTML('beforeend', markUpCountry);
   countryList.style.listStyle = 'none';
   countryList.style.fontSize = '30px';
   countryList.style.margin = '0';
-  const countryListImg = document.querySelector('.country-list > img');
-  countryListImg.style.paddingLeft = '15px';
+  countryList.style.paddingLeft = '0';
+  const countryListImg = document.querySelectorAll('.country-list > li > span');
+  console.log(countryListImg);
+  for (const iterator of countryListImg) {
+    iterator.style.paddingLeft = '15px';
+  }
 }
