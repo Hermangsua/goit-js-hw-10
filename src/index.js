@@ -34,7 +34,6 @@ function countrySearch(evt) {
 }
 inputSearch.addEventListener('input', debounce(countrySearch, DEBOUNCE_DELAY));
 getCountry('peru');
-
 function clearHtml() {
   countryList.innerHTML = '';
   countryDiv.innerHTML = '';
@@ -78,5 +77,5 @@ function createCountriesMarkUp(countries) {
   countryList.style.fontSize = '30px';
   countryList.style.margin = '0';
   const countryListImg = document.querySelector('.country-list > img');
-  countryListImg.paddingLeft = '15px';
+  countryListImg.style.paddingLeft = '15px';
 }
