@@ -19,10 +19,10 @@ function countrySearch(evt) {
           );
         } else if (2 <= serverAnswer.length && serverAnswer.length <= 10) {
           createCountriesMarkUp(serverAnswer);
-          console.log('Rendercountrylist');
+          // console.log('Rendercountrylist');
         } else if (serverAnswer.length === 1) {
           createOneCountryMarkUp(serverAnswer);
-          console.log('Rendercountrydiv');
+          // console.log('Rendercountrydiv');
         } else if (serverAnswer.length === 0) {
           Notiflix.Notify.failure('Oops, there is no country with that name');
         }
@@ -78,7 +78,7 @@ function createCountriesMarkUp(countries) {
   countryList.style.margin = '0';
   countryList.style.paddingLeft = '0';
   const countryListImg = document.querySelectorAll('.country-list > li > span');
-  console.log(countryListImg);
+  // console.log(countryListImg);
   for (const iterator of countryListImg) {
     iterator.style.paddingLeft = '15px';
   }
